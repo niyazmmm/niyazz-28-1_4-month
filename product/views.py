@@ -161,6 +161,17 @@ def register_view(request):
         return render(request, 'users/register.html', context=data)
 
 
+    def posts_view(request):
+        if request.method = 'GET':
+            posts = Post.objects.all()
+            search = request.GET.get('search')
+
+            max_page = posts.__len__() / PAGINATION_LIMIT
+
+
+
+
+
 
 
 
